@@ -1,12 +1,18 @@
+// tailwind.config.js
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",      
+    "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'page-background': '#F9F8FE',
+      },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [forms],
+};
