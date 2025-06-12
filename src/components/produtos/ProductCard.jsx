@@ -19,7 +19,7 @@ function ProductCard({ product }) {
         <p className="text-sm sm:text-base font-semibold text-gray-800 mb-1 sm:mb-2">{product.name}</p>
         
         <div className="flex items-baseline space-x-2">
-          <span className="text-base sm:text-lg font-bold text-pink-600">{product.currentPrice}</span>
+          <span className="text-base sm:text-lg font-bold text-black">{product.currentPrice}</span>
           {product.oldPrice && (
             <span className="text-xs sm:text-sm text-gray-500 line-through">{product.oldPrice}</span> 
           )}
