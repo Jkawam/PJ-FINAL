@@ -11,7 +11,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
     if (isMobileSearchActive) {
       setIsMobileSearchActive(false);
-    }
+    }1 
   };
 
   const toggleMobileSearch = () => {
@@ -103,11 +103,7 @@ function Header() {
             <Link to="/cadastro" className="text-gray-700 hover:text-pink-600">Cadastre-se</Link>
             <Link to="/entrar" className="bg-pink-600 text-white px-14 py-3 rounded-md hover:bg-pink-700 transition duration-300">Entrar</Link>
             <div className="relative"> {/* Ícone do carrinho Desktop */}
-              <Link to="/carrinho" className="text-gray-700 hover:text-pink-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.023.828L5.58 15.65a4.723 4.723 0 0 0 .568.494l5.636 4.489a1.125 1.125 0 0 0 1.996 0l5.636-4.489a4.723 4.723 0 0 0 .568-.494l.676-3.137A6.026 6.026 0 0 1 21 12v3.375c0 .621-.504 1.125-1.125 1.125H3.375c-.621 0-1.125-.504-1.125-1.125V12A9 9 0 0 0 14.625 9c-1.313 0-2.613.304-3.825.9-.663.348-1.324.646-1.99.902a1.125 1.125 0 0 1-1.44-.373L7.5 10.5h-.375c-.621 0-1.125.504-1.125 1.125v.75m8.868-9.75v-1.063c0-.621.504-1.125 1.125-1.125h.75c.621 0 1.125.504 1.125 1.125v1.063a4.723 4.723 0 0 0 1.83 2.87M8.067 7.5c.9-.228 1.83-.348 2.763-.348 2.06 0 4.103.7 5.766 2.09l.375-.375M1.5 12a9 9 0 0 1 14.625-7.5" />
-                </svg>
-              </Link>
+              <img src="src/layouts/imagens/carrinho.png" alt="" />
             </div>
           </div>
         </div>
@@ -151,7 +147,7 @@ function Header() {
         {/* Cabeçalho do Menu Mobile (Logo e botão de fechar) */}
         <div className="p-4 flex justify-between items-center border-b">
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-pink-600">Digital Store</span>
+            <img src="src/layouts/imagens/logo.png" alt="logo" />
           </div>
           <button onClick={toggleMenu} className="text-gray-700 hover:text-pink-600 focus:outline-none">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
