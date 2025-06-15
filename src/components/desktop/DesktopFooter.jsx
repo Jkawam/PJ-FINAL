@@ -4,7 +4,7 @@ import React from "react";
 function DesktopFooter() {
 return (
     <footer className="hidden md:block bg-neutral-900 text-white px-12 py-10">
-    <div className="max-w-7xl mx-auto grid grid-cols-4 gap-12 text-sm">
+    <div className=" mx-auto grid grid-cols-4 gap-14 text-sm container px-4 py-3  items-center justify-between md:py-4">
         <div>
             <img src="/public/assets/logo-footer.svg" alt="Digital Store Logo" className="h-8 mb-2" />
             <p className="mb-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
