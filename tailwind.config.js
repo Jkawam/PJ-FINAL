@@ -1,5 +1,6 @@
 // tailwind.config.js
 import forms from '@tailwindcss/forms';
+import scrollbarHide from 'tailwind-scrollbar-hide'; // <<<<< Importe o plugin aqui
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,5 +15,8 @@ export default {
       },
     },
   },
-  plugins: [forms],
+  plugins: [
+    forms,
+    scrollbarHide, 
+  ],
 };
