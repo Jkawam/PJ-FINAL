@@ -120,8 +120,8 @@ function Home() {
 
         <section className='bg-gray-50 px-6 py-12
         '>
-          <div className='flex justify-between'>
-            <h2 className='text-xl font-semibold text-gray-800 mb-6'>Coleção em destaque</h2>
+          <div className='flex justify-between mb-4'>
+            <h2 className='text-xl font-semibold text-gray-800 mb-6'>Produtos em alta</h2>
 
             <button
               className="relative bg-pink-600 text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.9em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group"
@@ -149,7 +149,7 @@ function Home() {
           </div>
 
           <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6'>
-          
+
           <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Max 90 - Masculino"} preco={"R$ 200,00"} desconto={"R$ 100,00"} off={"30%"}/>
 
           <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Force 1 - Masculino"} preco={"R$ 250,00"} desconto={"R$ 150,00"} off={"30%"}/>
