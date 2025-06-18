@@ -1,4 +1,3 @@
-// src/routes/Routes.jsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -10,7 +9,8 @@ import Home from '../pages/Home';
 import Produtos from '../pages/Produtos';
 import Categorias from '../pages/categorias';
 import MeusPedidos from '../pages/pedidos';
-import ProductDetailsPage from '../pages/ProductDetailsPage'; // <<<<< CORRIGIDO: Importe o nome correto do componente
+import ProductDetailsPage from '../pages/ProductDetailsPage';
+import CompraProdutos from '../pages/compraprodutos'; // Importe a nova página de compra de produtos
 
 function AppRoutes() {
   return (
@@ -23,8 +23,8 @@ function AppRoutes() {
           <Route path="produtos" element={<Produtos />} />
           <Route path="categorias" element={<Categorias />} />
           <Route path="meus-pedidos" element={<MeusPedidos />} />
-          {/* Rota para detalhes do produto, aninhada sob o MainLayout */}
           <Route path="produtos/:id" element={<ProductDetailsPage />} />
+          <Route path="compraprodutos" element={<CompraProdutos />} /> {/* Rota para a nova página */}
         </Route>
       </Routes>
     </BrowserRouter>
