@@ -1,11 +1,10 @@
-// src/components/produtos/ProductFilter.jsx
 import React from 'react';
 
 function ProductFilter() {
   return (
     <div className="h-full overflow-y-auto px-4">
       {/* Seção de Marca */}
-      <div className="mb-6"> 
+      <div className="mb-6">
         <h3 className="font-semibold text-base text-gray-700 mb-2">Marca</h3>
         <div className="space-y-2">
           {['Adidas', 'Calenciaga', 'K-Swiss', 'Nike', 'Puma'].map((marca) => (

@@ -31,7 +31,7 @@ function Header() {
       ) : (
         <MobileHeader 
           digitalStoreLogoUrl={DIGITAL_STORE_LOGO_URL} 
-          userProfileImageUrl={USER_PROFILE_IMAGE_URL} 
+          userProfileImageUrl={USER_PROFILE_IMAGE_URL}
         />
       )}
     </header>

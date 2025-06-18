@@ -9,7 +9,6 @@ function Home() {
         <div className="bg-gray-50 px-6 py-20 flex flex-col md:flex-row items-center justify-between">
           
           <div className="max-w-md space-y-4">
-           
             <p className="text-sm text-yellow-500 font-semibold">Melhores ofertas personalizadas</p>
 
             <h1 className="text-4xl font-bold text-gray-900 flex items-center">

@@ -1,8 +1,10 @@
 // src/components/mobile/MobileFooter.jsx
-import React from "react";
+import React from "react"; // Removido forwardRef
 
-function MobileFooter() {
+// Removido forwardRef do componente
+function MobileFooter() { 
   return (
+    // Removido ref={ref} pois não é mais um forwardRef
     <footer className="md:hidden bg-neutral-900 text-white px-6 py-8 text-sm">
       {/* Logo - Caminho corrigido e margem ajustada */}
       <img src="/assets/logo-footer.svg" alt="Digital Store Logo" className="h-8 mb-4" />
@@ -20,9 +22,9 @@ function MobileFooter() {
       </div>
 
       {/* Seção de Informação (conforme imagem) - Sem grid de colunas, empilhado */}
-      <div className="mb-8"> {/* Adicionada margem inferior para espaçamento */}
-        <h3 className="font-semibold text-lg mb-4">Informação</h3> {/* Título maior e com mais margem */}
-        <ul className="space-y-3 text-gray-300"> {/* Espaçamento entre itens e cor de texto */}
+      <div className="mb-8"> 
+        <h3 className="font-semibold text-lg mb-4">Informação</h3> 
+        <ul className="space-y-3 text-gray-300"> 
           <li>Sobre Drip Store</li>
           <li>Segurança</li>
           <li>Wishlist</li>
@@ -33,9 +35,9 @@ function MobileFooter() {
       </div>
 
       {/* Seção de Categorias (na imagem, também aparece como "Informação") - Sem grid de colunas */}
-      <div className="mb-8"> {/* Adicionada margem inferior para espaçamento */}
-        <h3 className="font-semibold text-lg mb-4">Informação</h3> {/* Título maior e com mais margem */}
-        <ul className="space-y-3 text-gray-300"> {/* Espaçamento entre itens e cor de texto */}
+      <div className="mb-8"> 
+        <h3 className="font-semibold text-lg mb-4">Informação</h3> 
+        <ul className="space-y-3 text-gray-300"> 
           <li>Camisetas</li>
           <li>Calças</li>
           <li>Bonés</li>
@@ -45,9 +47,9 @@ function MobileFooter() {
       </div>
 
       {/* Nova Seção de Contato - Adicionada conforme a imagem */}
-      <div className="mb-8"> {/* Adicionada margem inferior para espaçamento */}
-        <h3 className="font-semibold text-lg mb-4">Contato</h3> {/* Título maior e com mais margem */}
-        <ul className="space-y-3 text-gray-300"> {/* Espaçamento entre itens e cor de texto */}
+      <div className="mb-8"> 
+        <h3 className="font-semibold text-lg mb-4">Contato</h3> 
+        <ul className="space-y-3 text-gray-300"> 
           <li>Av. do ze, 1510 - em baixo da ponte -</li>
           <li>uruau, beberibe - CE, 60150-161</li>
           <li>(85) 3051-3411</li>
@@ -63,6 +65,6 @@ function MobileFooter() {
       </div>
     </footer>
   );
-}
+};
 
 export default MobileFooter;
