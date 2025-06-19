@@ -1,39 +1,42 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Importe seu componente de Layout
+
 import MainLayout from '../layouts/MainLayout';
 
-// Importe suas páginas
+
 import Home from '../pages/Home';
 import Produtos from '../pages/Produtos';
-import Categorias from '../pages/categorias';
+import Categorias from '../pages/Categorias';
 import MeusPedidos from '../pages/pedidos';
-import ProductDetailsPage from '../pages/ProductDetailsPage'; // Importe o componente ProductDetailsPage
-import CompraProdutos from '../pages/CompraProdutos'; // Importe a nova página de compra de produtos
-import Cadastro from '../pages/login/Cadastro'; // Importe o componente Cadastro
-import Entrar from '../pages/login/Entrar'; // Importe o componente Entrar
-import Informacoes from '../pages/login/Informacoes'; // Importe o componente Informacoes
-import FinalizarCompra from '../pages/produtofinal/FinalizarCompra'; // Importe o componente FinalizarCompra
+import ProductDetailsPage from '../pages/ProductDetailsPage';
+import CompraProdutos from '../pages/CompraProdutos';
+import Cadastro from '../pages/login/Cadastro';
+import Entrar from '../pages/login/Entrar';
+import Informacoes from '../pages/login/Informacoes';
+import FinalizarCompra from '../pages/produtofinal/FinalizarCompra';
+import MeuPerfil from '../pages/pedidos/MeuPerfil';
+import MinhasInformacoes from '../pages/pedidos/MinhasInformaçoes';
+import Pagamento from '../pages/pedidos/Pagamento';
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Rota Pai para o Layout */}
         <Route path="/" element={<MainLayout />}>
-          {/* Rotas Filhas que usarão o MainLayout */}
           <Route index element={<Home />} />
           <Route path="produtos" element={<Produtos />} />
+          <Route path="produtos/:id" element={<ProductDetailsPage />} />
           <Route path="categorias" element={<Categorias />} />
           <Route path="cadastro" element={<Cadastro />} />
-          <Route path="informacoes" element={<Informacoes />} />
           <Route path="entrar" element={<Entrar />} />
-          {/* Rota para Meus Pedidos, aninhada sob o MainLayout */}
+          <Route path="informacoes" element={<Informacoes />} />
           <Route path="meus-pedidos" element={<MeusPedidos />} />
-          <Route path="produtos/:id" element={<ProductDetailsPage />} />
-          <Route path="compraprodutos" element={<CompraProdutos />} /> {/* Rota para a nova página */}
-          <Route path="finalizar-compra" element={<FinalizarCompra />} /> {/* Rota para Finalizar Compra */}
+          <Route path="compraprodutos" element={<CompraProdutos />} />
+          <Route path="finalizar-compra" element={<FinalizarCompra />} />
+          <Route path="meu-perfil" element={<MeuPerfil />} />
+          <Route path="minhas-informacoes" element={<MinhasInformacoes />} />
+          <Route path="pagamento" element={<Pagamento />} />
         </Route>
       </Routes>
     </BrowserRouter>
