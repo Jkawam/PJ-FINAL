@@ -1,5 +1,6 @@
 import React from 'react';
 import Cards from '../functions/Cards'; // Certifique-se de que o caminho para Cards.jsx está correto
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -131,28 +132,12 @@ function Home() {
             <div className='flex justify-between mb-4'>
               <h2 className='text-xl font-semibold text-gray-800 mb-6'>Produtos em alta</h2>
 
-              <button
-                className="relative bg-pink-600 text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.9em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group"
-              >
-                <span className="mr-10">Ver todos</span>
-                <div
-                  className="absolute right-[0.3em] bg-white h-[2.2em] w-[2.2em] rounded-[0.7em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.6em)] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] active:scale-95"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    className="w-[1.1em] transition-transform duration-300 text-[#7b52b9] group-hover:translate-x-[0.1em]"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      fill="currentColor"
-                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    ></path>
+               <Link to="/produtos" className="text-pink-600 text-sm font-semibold hover:underline flex items-center">
+                            Ver todos
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                   </svg>
-                </div>
-              </button>
+                </Link>
 
             </div>
 
