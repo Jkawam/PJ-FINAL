@@ -1,4 +1,4 @@
-// src/components/MobileHeader.jsx
+
 import React, { useState, useEffect, useRef } from 'react'; // Importamos useEffect e useRef
 import { Link } from 'react-router-dom';
 

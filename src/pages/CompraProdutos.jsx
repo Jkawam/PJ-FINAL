@@ -1,8 +1,7 @@
-// src/pages/CompraProdutos.jsx
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-// Importe a imagem do produto, se necessário (ou use um placeholder por enquanto)
+// Importando a imagem do produto mockado
 import producImage5Preview from '../assets/images/produtos/produc-image-5-removebg-preview.png';
 
 // Dados mockados para um item no carrinho (você pode expandir isso)
@@ -45,7 +44,7 @@ const mockRelatedProducts = {
         thumbnailImages: [producImage5Preview, producImage5Preview, producImage5Preview, producImage5Preview, producImage5Preview],
         sizes: [35, 36, 37, 38], colors: ['#FFC0CB'],
     },
-    // Adicione mais produtos mockados para o carrossel se precisar de mais itens visíveis
+
 };
 
 // Adaptação da função para produtos relacionados, filtrando o item do carrinho se ele for o mesmo.
@@ -62,6 +61,7 @@ const getRelatedProductsForCarousel = (allProducts, cartProductId, repeatCount =
 function CompraProdutos() {
     const [cartItem, setCartItem] = useState(mockCartItem);
     const carouselRef = useRef(null);
+    // const navigate = useNavigate(); // Descomente se precisar de navegação programática
 
     // Calcula os totais com base no item mockado
     // O subtotal é o preço unitário, já que a quantidade não será interativa
@@ -82,7 +82,7 @@ function CompraProdutos() {
 
             let scrollAmount;
 
-            if (window.innerWidth >= 768) { // md breakpoint é 768px
+            if (window.innerWidth >= 768) {
                 scrollAmount = cardTotalWidth;
             } else {
                 scrollAmount = cardTotalWidth * 2;
@@ -96,10 +96,9 @@ function CompraProdutos() {
         }
     };
 
-    // A função handleQuantityChange foi removida, pois não haverá interação de quantidade.
-    // Os botões de +/- existirão, mas sem funcionalidade de clique para alterar o estado.
 
-    // Remove o item do carrinho (simulado)
+
+    // Função para remover o item do carrinho (simulando a remoção)
     const handleRemoveItem = () => {
         setCartItem(null);
     };
@@ -111,12 +110,7 @@ function CompraProdutos() {
     return (
         <div className="bg-page-background py-8 font-inter relative">
             <div className="container mx-auto px-4 md:pb-0">
-                {/* Breadcrumbs (Navegação hierárquica) - Mantido igual */}
-                <div className="text-gray-600 text-sm mb-6">
-                    <Link to="/" className="hover:underline">Home</Link> /
-                    <Link to="/produtos" className="hover:underline"> Produtos</Link> /
-                    <span className="font-semibold text-gray-800">Meu Carrinho</span>
-                </div>
+
 
                 <div className="lg:flex lg:gap-8">
                     {/* Coluna da Esquerda: Meu Carrinho + Cupom/Frete (Desktop) / ou separadas (Mobile) */}
@@ -362,27 +356,36 @@ function CompraProdutos() {
                                 <p className="text-sm text-gray-500 text-right mt-1">ou 10x de R$ {(total / 10).toFixed(2).replace('.', ',')} sem juros</p>
                             </div>
                             {/* BOTÃO CONTINUAR - Visível em desktop, oculto em mobile */}
-                            <button className="w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md hidden md:block">
+                            <Link
+                               to="/finalizar-compra" // Adicionado o caminho para a nova página
+                               className="w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md hidden md:block text-center" // Adicionado text-center para centralizar
+                            >
                                 Continuar
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* NOVA CAIXA PARA O TOTAL FINAL E BOTÃO CONTINUAR - SOMENTE MOBILE (STICKY NO BOTTOM) */}
-            <div className="p-4 bg-white shadow-lg sticky bor bottom-0 left-0 right-0 md:hidden z-40 border-t border-gray-200"
-                style={{ marginBottom: '0' }}
-            >
-                <div className="flex justify-between text-lg font-bold text-black mb-2">
-                    <span>Total</span>
-                    <span className="text-red-600">R$ {total.toFixed(2).replace('.', ',')}</span>
-                </div>
-                <p className="text-sm text-gray-500 text-right mb-4">ou 10x de <span className="font-bold text-black">R$ {(total / 10).toFixed(2).replace('.', ',')}</span> sem juros</p>
-                <button className="w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md">
-                    Continuar
-                </button>
+            <div
+            className="bg-white shadow-lg sticky bottom-0 left-0 right-0 md:hidden z-40 border-t border-gray-200 py-4"
+            style={{ marginBottom: 0 }}
+>
+            <div className="flex justify-between text-lg font-bold text-black mb-2 px-4">
+    <span>Total</span>
+    <span className="text-red-600">R$ {total.toFixed(2).replace('.', ',')}</span>
             </div>
+            <p className="text-sm text-gray-500 text-right mb-4 px-4">
+    ou 10x de <span className="font-bold text-black">R$ {(total / 10).toFixed(2).replace('.', ',')}</span> sem juros
+        </p>
+        <Link
+    to="/finalizar-compra"
+    className="block bg-orange-500 text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md text-center mx-4"
+    >
+    Continuar
+</Link>
+</div>
         </div>
     );
 }

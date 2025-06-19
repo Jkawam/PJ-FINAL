@@ -1,5 +1,5 @@
-// src/components/mobile/MobileFooter.jsx
 import React from "react"; // Removido forwardRef
+
 
 // Removido forwardRef do componente
 function MobileFooter() { 

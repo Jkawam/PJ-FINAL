@@ -1,4 +1,3 @@
-// src/pages/Produtos.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import ProductFilter from '../../src/components/produtos/ProductFilter';
 import ProductGrid from '../../src/components/produtos/ProductGrid';

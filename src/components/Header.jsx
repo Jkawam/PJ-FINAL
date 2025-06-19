@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import React, { useState, useEffect } from 'react'; // Importe useEffect
 import DesktopHeader from './desktop/DesktopHeader';
 import MobileHeader from './mobile/MobileHeader';

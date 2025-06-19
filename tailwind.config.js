@@ -1,4 +1,3 @@
-// tailwind.config.js
 import forms from '@tailwindcss/forms';
 import scrollbarHide from 'tailwind-scrollbar-hide'; // <<<<< Importe o plugin aqui
 

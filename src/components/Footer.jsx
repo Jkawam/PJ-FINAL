@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from "react";
 import MobileFooter from "./mobile/MobileFooter";
 import DesktopFooter from "./desktop/DesktopFooter";

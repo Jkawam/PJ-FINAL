@@ -1,6 +1,5 @@
-// src/pages/ProductDetailsPage.jsx
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom'; // Importe useNavigate
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 // Importe as imagens diretamente aqui
 import producImage5Preview from '../assets/images/produtos/produc-image-5-removebg-preview.png';

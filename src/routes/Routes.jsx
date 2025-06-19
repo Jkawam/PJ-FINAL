@@ -10,10 +10,11 @@ import Produtos from '../pages/Produtos';
 import Categorias from '../pages/categorias';
 import MeusPedidos from '../pages/pedidos';
 import ProductDetailsPage from '../pages/ProductDetailsPage'; // Importe o componente ProductDetailsPage
-import CompraProdutos from '../pages/compraprodutos'; // Importe a nova página de compra de produtos
+import CompraProdutos from '../pages/CompraProdutos'; // Importe a nova página de compra de produtos
 import Cadastro from '../pages/login/Cadastro'; // Importe o componente Cadastro
 import Entrar from '../pages/login/Entrar'; // Importe o componente Entrar
 import Informacoes from '../pages/login/Informacoes'; // Importe o componente Informacoes
+import FinalizarCompra from '../pages/produtofinal/FinalizarCompra'; // Importe o componente FinalizarCompra
 
 function AppRoutes() {
   return (
@@ -32,6 +33,7 @@ function AppRoutes() {
           <Route path="meus-pedidos" element={<MeusPedidos />} />
           <Route path="produtos/:id" element={<ProductDetailsPage />} />
           <Route path="compraprodutos" element={<CompraProdutos />} /> {/* Rota para a nova página */}
+          <Route path="finalizar-compra" element={<FinalizarCompra />} /> {/* Rota para Finalizar Compra */}
         </Route>
       </Routes>
     </BrowserRouter>

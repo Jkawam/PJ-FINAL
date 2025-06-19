@@ -1,4 +1,3 @@
-// src/components/desktop/DesktopFooter.jsx
 import React from "react";
 
 function DesktopFooter() {
