@@ -23,7 +23,9 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<MainLayout />}>
+
           <Route index element={<Home />} />
           <Route path="produtos" element={<Produtos />} />
           <Route path="produtos/:id" element={<ProductDetailsPage />} />
@@ -31,6 +33,7 @@ function AppRoutes() {
           <Route path="cadastro" element={<Cadastro />} />
           <Route path="entrar" element={<Entrar />} />
           <Route path="informacoes" element={<Informacoes />} />
+
           <Route path="meus-pedidos" element={<MeusPedidos />} />
           <Route path="compraprodutos" element={<CompraProdutos />} />
           <Route path="finalizar-compra" element={<FinalizarCompra />} />
