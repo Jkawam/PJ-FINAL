@@ -5,7 +5,11 @@ import Footer from '../components/Footer'; // Orquestrador de footers
 
 function MainLayout() {
   const location = useLocation();
-  const hideHeaderFooter = ["/cadastro", "/entrar", "//Informacoes"].includes(location.pathname);
+  const hideHeaderFooter = ["/cadastro", "/entrar", "/Informacoes"].includes(location.pathname); // Corrigi para /Informacoes
+  
+  // Define se o padding deve ser aplicado ao main
+  // Queremos padding em todas as páginas, exceto nas que o fundo é "total" (como /cadastro)
+  const applyMainPadding = !["/cadastro", "/entrar", "/Informacoes"].includes(location.pathname); 
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -13,8 +17,8 @@ function MainLayout() {
       {/* Header dinâmico */}
 
       {/* Conteúdo principal das rotas */}
-      {/* padding-bottom volta ao padrão de p-6 */}
-      <main className="flex-grow p-6">
+      {/* O padding agora é condicional */}
+      <main className={`flex-grow ${applyMainPadding ? 'p-6' : ''}`}>
         <Outlet />
       </main>
 

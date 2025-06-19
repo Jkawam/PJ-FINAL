@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function Cadastro() {
   const [form, setForm] = useState({ email: "" });
 
@@ -15,9 +14,9 @@ function Cadastro() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-violet-200 to-slate-50 flex items-center justify-center p-4">
-      <div className="flex flex-col md:flex-row-reverse items-center gap-8 max-w-6xl w-full">
-        
+    <div className="min-h-screen w-full bg-violet-200 flex items-center justify-center">
+      <div className="flex flex-col md:flex-row-reverse items-center gap-8 max-w-6xl w-full p-4">
+
         <div className="hidden md:flex w-full md:w-1/2 justify-center">
           <img
             src="src/assets/images/produtos/cadastroimg-removebg-preview.png"
@@ -26,9 +25,10 @@ function Cadastro() {
           />
         </div>
 
-        {/* Formulário */}
         <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 w-full max-w-md">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-gray-800">Crie sua conta</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center md:text-left text-gray-800">
+            Crie sua conta
+          </h2>
 
           <p className="text-sm text-gray-600 text-center sm:text-left mb-4">
             Já possui uma conta?{" "}
@@ -45,7 +45,7 @@ function Cadastro() {
                 onChange={handleChange}
                 placeholder="Digite seu email"
                 required
-                className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 bg-gray-50 focus:ring-pink-500 focus:border-pink-500"
               />
             </div>
 
@@ -58,7 +58,15 @@ function Cadastro() {
               </Link>
             </button>
           </form>
-          <span  className='flex items-center justify-center mt-4'>Ou fazer login com <img src="src/layouts/imagens/gmail.png" alt="" className='w-6 h-6 ml-2'/> <img src="src/layouts/imagens/facebook.png" alt="" className='w-6 h-6 ml-2' /></span>
+
+          {/* Texto e ícones */}
+          <div className="flex flex-col items-center space-y-2 mt-4 text-gray-700 md:flex-row md:space-x-2 md:space-y-0 md:justify-center">
+            <span>Ou fazer login com</span>
+            <div className="flex space-x-2">
+              <img src="src/layouts/imagens/gmail.png" alt="Gmail" className="w-6 h-6" />
+              <img src="src/layouts/imagens/facebook.png" alt="Facebook" className="w-6 h-6" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
