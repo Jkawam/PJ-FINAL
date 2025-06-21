@@ -1,112 +1,129 @@
 import React from "react";
 
 function DesktopFooter() {
-    return (
-        <footer className="hidden md:block bg-neutral-900 text-white px-12 py-10">
-            <div className=" mx-auto grid grid-cols-4 gap-14 text-sm container px-4 py-3  items-center justify-between md:py-4">
-                <div>
-                    <img src="/public/assets/logo-footer.svg" alt="Digital Store Logo" className="h-8 mb-2" />
-                    <p className="mb-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    <div className="flex gap-4">
-                        <i className="fab fa-facebook-f"></i>
-                        <i className="fab fa-instagram"></i>
-                        <i className="fab fa-twitter"></i>
-                    </div>
-                    <div>
+  return (
+    <footer className="hidden md:block bg-neutral-900 text-white px-12 py-10">
+      <div className="mx-auto grid grid-cols-4 gap-14 text-sm container px-4 py-3 items-center justify-between md:py-4">
+        {/* Primeira Coluna */}
+        <div>
+          <img
+            src="/assets/logo-footer.svg"
+            alt="Digital Store Logo"
+            className="h-8 mb-2"
+          />
+          <p className="mb-4 text-gray-400">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+          </p>
 
-                        <ul class="flex justify-center mt-5 space-x-5">
-                            <li>
-                                <a
-                                    class="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="w-10 h-10"
-                                    >
-                                        <path
-                                            clip-rule="evenodd"
-                                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                            fill-rule="evenodd"
-                                        ></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    class="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="w-10 h-10"
-                                    >
-                                        <path
-                                            clip-rule="evenodd"
-                                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                            fill-rule="evenodd"
-                                        ></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    class="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="w-10 h-10"
-                                    >
-                                        <path
-                                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                                        ></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
+          <ul className="flex justify-center mt-5 space-x-5">
+            {/* Facebook */}
+            <li>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
+                aria-label="Facebook"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-10 h-10"
+                >
+                  <path
+                    clipRule="evenodd"
+                    fillRule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.778-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+            </li>
 
-                            </li>
-                        </ul>
+            {/* Instagram */}
+            <li>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
+                aria-label="Instagram"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-10 h-10"
+                >
+                  <path
+                    clipRule="evenodd"
+                    fillRule="evenodd"
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.354 3.608 1.33.975.975 1.267 2.242 1.33 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.354 2.633-1.33 3.608-.975.975-2.242 1.267-3.608 1.33-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.354-3.608-1.33-.975-.975-1.267-2.242-1.33-3.608C2.175 15.747 2.163 15.368 2.163 12s.012-3.584.07-4.85c.062-1.366.354-2.633 1.33-3.608.975-.975 2.242-1.267 3.608-1.33C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.737 0 8.332.015 7.052.073 5.773.13 4.546.384 3.455 1.474 2.364 2.565 2.11 3.791 2.054 5.07 1.996 6.35 1.981 6.754 1.981 10.017c0 3.263.015 3.667.073 4.947.056 1.28.31 2.506 1.401 3.597 1.09 1.091 2.317 1.344 3.597 1.401 1.28.058 1.684.073 4.947.073 3.263 0 3.667-.015 4.947-.073 1.28-.056 2.506-.31 3.597-1.401 1.091-1.09 1.344-2.317 1.401-3.597.058-1.28.073-1.684.073-4.947 0-3.263-.015-3.667-.073-4.947-.056-1.28-.31-2.506-1.401-3.597C19.453.384 18.227.13 16.947.073 15.667.015 15.263 0 12 0z"
+                  />
+                  <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z" />
+                  <circle cx="18.406" cy="5.594" r="1.44" />
+                </svg>
+              </a>
+            </li>
 
-                    </div>
-                </div>
-                <div>
-                    <h3 className="font-semibold mb-3">Informação</h3>
-                    <ul className="space-y-2">
-                        <li>Sobre Drip Store</li>
-                        <li>Segurança</li>
-                        <li>Wishlist</li>
-                        <li>Blog</li>
-                        <li>Trabalhe conosco</li>
-                        <li>Meus Pedidos</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="font-semibold mb-3">Categorias</h3>
-                    <ul className="space-y-2">
-                        <li>Camisetas</li>
-                        <li>Calças</li>
-                        <li>Bonés</li>
-                        <li>Headphones</li>
-                        <li>Tênis</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="font-semibold mb-3">Contato</h3>
-                    <p className="text-sm">
-                        Av. do zé- no uruau - em baixo da ponte, beberibe - CE, 040<br />
-                        (85) 3051-3411
-                    </p>
-                </div>
-            </div>
-            <hr className="my-6 border-gray-700" />
-            <p className="text-center text-xs text-gray-500">© 2025 Digital College</p>
-        </footer>
-    );
+            {/* Twitter */}
+            <li>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400"
+                aria-label="Twitter"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-10 h-10"
+                >
+                  <path d="M23.954 4.569c-.885.39-1.83.654-2.825.775a4.958 4.958 0 0 0 2.163-2.724 9.862 9.862 0 0 1-3.127 1.195 4.925 4.925 0 0 0-8.39 4.49A13.978 13.978 0 0 1 1.671 3.149a4.822 4.822 0 0 0-.666 2.475c0 1.708.869 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.928 4.928 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.93 4.93 0 0 0 4.604 3.417A9.867 9.867 0 0 1 0 19.54a13.936 13.936 0 0 0 7.548 2.209c9.142 0 14.307-7.721 13.995-14.646a9.936 9.936 0 0 0 2.411-2.534z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Segunda Coluna */}
+        <div>
+          <h3 className="font-semibold mb-3">Informação</h3>
+          <ul className="space-y-2">
+            <li>Sobre Drip Store</li>
+            <li>Segurança</li>
+            <li>Wishlist</li>
+            <li>Blog</li>
+            <li>Trabalhe conosco</li>
+            <li>Meus Pedidos</li>
+          </ul>
+        </div>
+
+        {/* Terceira Coluna */}
+        <div>
+          <h3 className="font-semibold mb-3">Categorias</h3>
+          <ul className="space-y-2">
+            <li>Camisetas</li>
+            <li>Calças</li>
+            <li>Bonés</li>
+            <li>Headphones</li>
+            <li>Tênis</li>
+          </ul>
+        </div>
+
+        {/* Quarta Coluna */}
+        <div>
+          <h3 className="font-semibold mb-3">Contato</h3>
+          <p className="text-sm">
+            Av. do zé – no uruau – em baixo da ponte, Beberibe – CE, 040<br />
+            (85) 3051-3411
+          </p>
+        </div>
+      </div>
+
+      <hr className="my-6 border-gray-700" />
+      <p className="text-center text-xs text-gray-500">
+        © 2025 Digital College
+      </p>
+    </footer>
+  );
 }
 
 export default DesktopFooter;

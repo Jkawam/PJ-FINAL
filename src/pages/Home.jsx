@@ -84,9 +84,7 @@ function Home() {
             </div>
           </section>
 
-
           {/* Produtos em alta */}
-          {/* Seção "Produtos em alta" */}
           <section className='bg-gray-50 py-12'>
             <div className='flex justify-between mb-4'>
               <h2 className='text-xl font-semibold text-gray-800 mb-6'>Produtos em alta</h2>
@@ -97,11 +95,9 @@ function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
               </Link>
-
             </div>
 
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6'>
-
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Max 90 - Masculino"} preco={"R$ 200,00"} desconto={"R$ 100,00"} off={"30%"} />
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Force 1 - Masculino"} preco={"R$ 250,00"} desconto={"R$ 150,00"} off={"30%"} />
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Jordan 1 - Masculino"} preco={"R$ 300,00"} desconto={"R$ 200,00"} />
@@ -110,7 +106,6 @@ function Home() {
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Jordan 1 - Masculino"} preco={"R$ 300,00"} desconto={"R$ 200,00"} />
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Jordan 1 - Masculino"} preco={"R$ 300,00"} desconto={"R$ 200,00"} />
               <Cards imagem={"src/layouts/imagemDeProdutos/airMax.png"} produto={"Tênis"} nome={"Air Jordan 1 - Masculino"} preco={"R$ 300,00"} desconto={"R$ 200,00"} />
-
             </div>
           </section>
 
@@ -144,7 +139,6 @@ function Home() {
               </div>
             </div>
           </section>
-
 
         </div>
       </div>
