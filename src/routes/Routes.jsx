@@ -18,7 +18,7 @@ import FinalizarCompra from '../pages/produtofinal/FinalizarCompra';
 import MeuPerfil from '../pages/pedidos/MeuPerfil';
 import MinhasInformacoes from '../pages/pedidos/MinhasInformaçoes';
 import Pagamento from '../pages/pedidos/Pagamento';
-
+import CompraFeita from '../pages/produtofinal/CompraFeita';
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -40,6 +40,7 @@ function AppRoutes() {
           <Route path="meu-perfil" element={<MeuPerfil />} />
           <Route path="minhas-informacoes" element={<MinhasInformacoes />} />
           <Route path="pagamento" element={<Pagamento />} />
+          <Route path="compra-feita" element={<CompraFeita />} />
         </Route>
       </Routes>
     </BrowserRouter>

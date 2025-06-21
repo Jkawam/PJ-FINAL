@@ -191,6 +191,28 @@ function MobileHeader({ digitalStoreLogoUrl }) {
 
         {/* Links e Ações do Menu Mobile */}
         <nav className="flex flex-col p-4 space-y-4 flex-grow">
+
+          <h1 className="text-xl font-semibold text-gray-700 mb-2">Olá, Francisquinho Erickzinho</h1>
+
+  {/* Links de configurações */}
+  <div className="flex flex-col space-y-2 mb-3">
+    <Link to="/minhas-informacoes" onClick={toggleMenu} className="relative text-gray-800 hover:text-pink-600 text-lg pt-2 pb-1 group">
+      <span className="relative inline-block">
+        Minhas Informações
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-600 transition-all duration-300 group-hover:w-full"></span>
+      </span>
+    </Link>
+    <Link to="/metodos-pagamento" onClick={toggleMenu} className="relative text-gray-800 hover:text-pink-600 text-lg pt-2 pb-1 group">
+      <span className="relative inline-block">
+        Métodos de Pagamento
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-600 transition-all duration-300 group-hover:w-full"></span>
+      </span>
+    </Link>
+  </div>
+
+  {/* Linha separadora */}
+  <hr className="border-t border-gray-300 my-3" />
+
           {/* Título "Páginas" */}
           <h2 className="text-xl font-semibold text-gray-700 mb-2">Páginas</h2>
           
