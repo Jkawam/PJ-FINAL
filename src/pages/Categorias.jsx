@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Categorias() {
-return (
-    <div className="min-h-screen bg-gradient-to-r from-red-500 to-purple-600 flex items-center justify-center p-4">
-    <div className="text-center">
-        <h1 className="text-white text-5xl font-bold mb-4">Página de categorias</h1>
-        <p className="text-white text-lg">Aqui você encontrará todos os nossas categorias!</p>
-        <p className="text-white text-md mt-4">Em construção...</p>
+function NotFound() {
+  return (
+    <div >
+      <div className='w-screen h-screen flex flex-col justify-center items-center  text-gray-700 px-4'>
+        <h1 className="text-9xl font-bold text-pink-600">404</h1>
+      <h2 className="text-2xl md:text-3xl font-semibold mb-2">Desculpe, página não encontrada</h2>
+      <p className="text-sm md:text-base text-gray-500 mb-6">
+        A página solicitada não pôde ser encontrada
+      </p>
+      </div>
     </div>
-    </div>
-);
+  );
 }
 
-export default Categorias;
+export default NotFound;
