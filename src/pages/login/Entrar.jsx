@@ -14,7 +14,7 @@ function Entrar() {
     console.log("Dados enviados:", form);
 
     // Simula login e redireciona
-    navigate("/informacoes");
+    navigate("/");
   };
 
   return (

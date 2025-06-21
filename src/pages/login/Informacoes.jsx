@@ -29,7 +29,7 @@ const Informacoes = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div className=" min-h-screen flex items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="w-full max-w-2xl space-y-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Criar Conta</h2>
 

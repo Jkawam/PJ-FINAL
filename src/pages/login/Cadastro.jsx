@@ -14,7 +14,7 @@ function Cadastro() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-violet-200 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-violet-200 to-slate-50 flex items-center justify-center p-4">
       <div className="flex flex-col md:flex-row-reverse items-center gap-8 max-w-6xl w-full p-4">
 
         <div className="hidden md:flex w-full md:w-1/2 justify-center">

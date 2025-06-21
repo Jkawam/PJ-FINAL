@@ -1,29 +1,26 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import Header from '../components/Header'; // Orquestrador de headers
-import Footer from '../components/Footer'; // Orquestrador de footers
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function MainLayout() {
   const location = useLocation();
-  const hideHeaderFooter = ["/cadastro", "/entrar", "/Informacoes"].includes(location.pathname); // Corrigi para /Informacoes
-  
-  // Define se o padding deve ser aplicado ao main
-  // Queremos padding em todas as páginas, exceto nas que o fundo é "total" (como /cadastro)
-  const applyMainPadding = !["/cadastro", "/entrar", "/Informacoes"].includes(location.pathname); 
+  const hideHeader = ["/cadastro", "/entrar", "/Informacoes"].includes(location.pathname);
+
+  const applyMainPadding = !hideHeader;
 
   return (
     <div className="flex flex-col min-h-screen">
-      {!hideHeaderFooter && <Header />}
-      {/* Header dinâmico */}
+      {/* Header opcional */}
+      {!hideHeader && <Header />}
 
-      {/* Conteúdo principal das rotas */}
-      {/* O padding agora é condicional */}
+      {/* Conteúdo principal */}
       <main className={`flex-grow ${applyMainPadding ? 'p-6' : ''}`}>
         <Outlet />
       </main>
 
-      {/* Footer dinâmico para mobile e desktop */}
-      {!hideHeaderFooter && <Footer />}
+      {/* Footer sempre visível */}
+      <Footer />
     </div>
   );
 }
