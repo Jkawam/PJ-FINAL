@@ -33,11 +33,11 @@ function Pedidos() {
               key={index}
               className="py-4 border-b border-gray-200 md:grid md:grid-cols-[1fr_150px] md:gap-4"
             >
-              <div className="flex gap-4 items-start">
+              <div className="flex gap-4 items-start ">
                 <img
                   src="src/assets/images/produtos/produc-image-5-removebg-preview.png"
                   alt="Tênis"
-                  className="w-16 h-16 rounded object-cover border"
+                  className="w-16 h-16 rounded object-cover border bg-violet-200"
                 />
 
                 <div className="flex-1">

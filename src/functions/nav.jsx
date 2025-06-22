@@ -9,7 +9,7 @@ const Nav = () => {
               <span className="block px-2 py-1 hover:text-pink-500 hover:border-pink-500-l-2 border-b mb-4 pb-4">Meu Perfil</span>
            </Link>
 
-           <Link to={`/Pedidos`}>
+           <Link to={`/meus-pedidos`}>
               <span className="block px-2 py-1 hover:text-pink-500 hover:border-pink-500-l-2 border-b mb-4 pb-4">Meus Pedidos</span>
            </Link>
 
