@@ -18,44 +18,46 @@ function CompraFeita() {
                     {/* Informações Pessoais */}
                     <div className="mb-4">
                         <h3 className="font-semibold">Informações Pessoais</h3>
-                        <p><strong>Nome:</strong> aaaaaaaaaaaaaa</p>
-                        <p><strong>CPF:</strong> aaaaaaaaaaa</p>
-                        <p><strong>Email:</strong> aaaaaaaaaaaaa</p>
-                        <p><strong>Celular:</strong> aaaaaaaaaaaaaaaaa</p>
+                        <p><strong>Nome:</strong> Francisco Antonio Pereira</p>
+                        <p><strong>CPF:</strong> 123485913-35</p>
+                        <p><strong>Email:</strong> francisco@gmail.com</p>
+                        <p><strong>Celular:</strong> (85) 5555-5555</p>
                     </div>
 
                     <hr className="my-4" />
 
                     {/* Informações de Entrega */}
                     <div className="mb-4">
-                        <h3 className="font-semibold">aaaaaaaaaaaaaaaaa</h3>
-                        <p><strong>Endereço:</strong> aaaaaaaaaaaaaaaaaaa</p>
-                        <p><strong>Bairro:</strong> aaaaaaaaaaaaaa</p>
-                        <p><strong>Cidade:</strong> aaaaaaaaaaaaaaaaaa</p>
-                        <p><strong>CEP:</strong> aaaaaaaaaaaaaaaaaaa</p>
+                        <h3 className="font-semibold">Informações de Entrega</h3>
+                        <p><strong>Endereço:</strong> Rua João Pessoa, 333</p>
+                        <p><strong>Bairro:</strong> Centro</p>
+                        <p><strong>Cidade:</strong> Fortaleza, Ceará</p>
+                        <p><strong>CEP:</strong> 433-8800
+
+                        </p>
                     </div>
 
                     <hr className="my-4" />
 
                     {/* Informações de Pagamento */}
                     <div className="mb-4">
-                        <h3 className="font-semibold">aaaaaaaaaaaaaaaaaaa</h3>
-                        <p><strong>Titular do Cartão:</strong> aaaaaaaaaaaaaaaaaa</p>
-                        <p><strong>Final do Cartão:</strong> aaaaaaaaaaaaaaaaaaa</p>
+                        <h3 className="font-semibold">Informações de Pagamento</h3>
+                        <p><strong>Titular do Cartão:</strong> FRANCISCO A P</p>
+                        <p><strong>Final do Cartão:</strong>  ************2020</p>
                     </div>
 
                     <hr className="my-4" />
 
                     {/* Resumo da Compra */}
                     <div className="mb-4">
-                        <h3 className="font-semibold">aaaaaaaaaaaaaaaaaaaa</h3>
+                        <h3 className="font-semibold">Resumo da compra</h3>
                         <div className="flex items-center gap-4">
                             <img
                                 className="w-16 h-16 rounded object-cover border bg-violet-200"
                                 src="src/assets/images/produtos/produc-image-5-removebg-preview.png"
                                 alt=""
                             />
-                            <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+                            <p>Tênis Nike Revolution 6 Next Nature Masculino</p>
                         </div>
                     </div>
 
