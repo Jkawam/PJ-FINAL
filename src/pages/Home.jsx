@@ -12,15 +12,15 @@ function Home() {
           <div className="bg-gray-50 pt-4 pb-12">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between px-4">
               {/* Texto */}
-              <div className="max-w-lg space-y-4 mt-10 md:mt-0">
+              <div className="max-w-lg space-y-4 mt-10 md:mt-0 text-center md:text-left"> {/* Adicionado text-center para mobile */}
                 <p className="text-sm text-yellow-500 font-semibold">Melhores ofertas personalizadas</p>
-                <h1 className="text-4xl font-bold text-gray-900 flex items-center">
+                <h1 className="text-4xl font-bold text-gray-900 flex items-center justify-center md:justify-start"> {/* Adicionado justify-center para mobile */}
                   Queima de <br />estoque Nike <span className="ml-2">🔥</span>
                 </h1>
                 <p className="text-gray-500 text-sm">
                   Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.
                 </p>
-                <button className="bg-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-700 transition">
+                <button className="bg-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-pink-700 transition block mx-auto md:inline-block md:mx-0"> {/* Adicionado block mx-auto para mobile */}
                   Ver Ofertas
                 </button>
               </div>
@@ -30,7 +30,7 @@ function Home() {
                 <img
                   src="src/layouts/imagemDeProdutos/nike-air-transparente.png"
                   alt="Tênis Nike"
-                  className="w-[300px] md:w-[500px] lg:w-[600px]"
+                  className="w-[300px] md:w-[500px] lg:w-[600px] mx-auto md:mx-0" // Centraliza a imagem no mobile
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ function Home() {
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip.
                   </p>
-                  <button className="bg-pink-500 text-white px-6 py-3 rounded-md hover:bg-pink-600 transition-colors duration-300 font-semibold text-sm">
+                  <button className="bg-pink-500 text-white px-6 py-3 rounded-md hover:bg-pink-600 transition-colors duration-300 font-semibold text-sm block mx-auto md:inline-block md:mx-0"> {/* Adicionado block mx-auto para mobile */}
                     Ver Oferta
                   </button>
                 </div>

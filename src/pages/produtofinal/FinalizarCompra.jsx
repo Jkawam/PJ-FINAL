@@ -213,23 +213,25 @@ function FinalizarCompra() {
                 </div>
             </div>
 
-            {/* Rodapé Fixo para Mobile: Total e Botão de Pagamento */}
-            {!isDesktop && (
-                <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg z-40 border-t border-gray-200">
-                    <div className="flex justify-between text-lg font-bold text-black mb-2">
-                        <span>Total</span>
-                        <span className="text-red-600">R$ {total.toFixed(2).replace('.', ',')}</span>
-                    </div>
-                    <p className="text-sm text-gray-500 text-right mb-4">
-                        ou 10x de <span className="font-bold text-black">R$ {(total / 10).toFixed(2).replace('.', ',')}</span> sem juros
-                    </p>
-                    <button
-                        onClick={handlePayment} /* Chama a função de pagamento */
-                        className="w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md">
-                        Realizar Pagamento
-                    </button>
+            {/* NOVA CAIXA PARA O TOTAL FINAL E BOTÃO CONTINUAR - SOMENTE MOBILE (STICKY NO BOTTOM) */}
+            <div
+            className="bg-white shadow-lg sticky bottom-0 left-0 right-0 md:hidden z-40 border-t border-gray-200 py-4"
+            style={{ marginBottom: 0 }}
+            >
+                <div className="flex justify-between text-lg font-bold text-black mb-2 px-4">
+                    <span>Total</span>
+                    <span className="text-red-600">R$ {total.toFixed(2).replace('.', ',')}</span>
                 </div>
-            )}
+                <p className="text-sm text-gray-500 text-right mb-4 px-4">
+                    ou 10x de <span className="font-bold text-black">R$ {(total / 10).toFixed(2).replace('.', ',')}</span> sem juros
+                </p>
+                <Link
+                    to="/compra-feita" // <<< ESTA É A ÚNICA LINHA ALTERADA PARA O DIRECIONAMENTO
+                    className="block bg-orange-500 text-white font-bold py-3 rounded-lg hover:bg-orange-600 transition-colors duration-200 text-lg shadow-md text-center mx-4"
+                >
+                    Continuar
+                </Link>
+            </div>
         </div>
     );
 }

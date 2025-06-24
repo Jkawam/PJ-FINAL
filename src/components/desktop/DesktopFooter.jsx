@@ -16,7 +16,8 @@ function DesktopFooter() {
             eiusmod tempor incididunt ut labore et dolore.
           </p>
 
-          <ul className="flex justify-center mt-5 space-x-5">
+          {/* Alterado para justify-start e tamanho dos ícones */}
+          <ul className="flex justify-start mt-5 space-x-5"> 
             {/* Facebook */}
             <li>
               <a
@@ -28,7 +29,7 @@ function DesktopFooter() {
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-10 h-10"
+                  className="w-8 h-8" 
                 >
                   <path
                     clipRule="evenodd"
@@ -50,7 +51,7 @@ function DesktopFooter() {
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-10 h-10"
+                  className="w-8 h-8" 
                 >
                   <path
                     clipRule="evenodd"
@@ -74,7 +75,7 @@ function DesktopFooter() {
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-10 h-10"
+                  className="w-8 h-8" 
                 >
                   <path d="M23.954 4.569c-.885.39-1.83.654-2.825.775a4.958 4.958 0 0 0 2.163-2.724 9.862 9.862 0 0 1-3.127 1.195 4.925 4.925 0 0 0-8.39 4.49A13.978 13.978 0 0 1 1.671 3.149a4.822 4.822 0 0 0-.666 2.475c0 1.708.869 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.928 4.928 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.93 4.93 0 0 0 4.604 3.417A9.867 9.867 0 0 1 0 19.54a13.936 13.936 0 0 0 7.548 2.209c9.142 0 14.307-7.721 13.995-14.646a9.936 9.936 0 0 0 2.411-2.534z" />
                 </svg>

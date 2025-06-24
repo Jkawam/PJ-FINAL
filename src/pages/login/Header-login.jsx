@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 
 
-function HeaderLogin({ digitalStoreLogoUrl }) {
- 
+function HeaderLogin() {
+
 
   return (
     <>
@@ -13,8 +12,8 @@ function HeaderLogin({ digitalStoreLogoUrl }) {
             </div>
 
         </div>
-     
-     
+    
+    
     </>
   );
 }

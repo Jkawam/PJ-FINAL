@@ -10,7 +10,7 @@ function MobileFooter() {
       </p>
 
       {/* Ícones Sociais */}
-      <div className="flex justify-center mt-5 space-x-5 mb-8">
+      <div className="flex justify-start mt-5 space-x-5 mb-8"> {/* Alterado para justify-start */}
         {/* Facebook */}
         <a href="#" className="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400" aria-label="Facebook">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
