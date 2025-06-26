@@ -4,7 +4,5 @@ Este repositório apresenta a **Digital Store**, uma plataforma de e-commerce de
 
 A Digital Store visa democratizar o acesso à moda e ao empreendedorismo online, proporcionando uma experiência de compra intuitiva para os clientes e uma vitrine digital poderosa para os vendedores.
 
-INTEGRANTES:Antônio Mathyas Santos da Silva
-
-            Iarlei Ferreira de Barros
+INTEGRANTES: Antônio Mathyas Santos da Silva, Iarlei Ferreira de Barros
              
