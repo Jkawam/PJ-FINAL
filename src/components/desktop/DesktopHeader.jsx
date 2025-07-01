@@ -1,26 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-// Importando imagem do produto (simulada para o mini-carrinho)
-import tenisImage from '../../assets/images/produtos/produc-image-5-removebg-preview.png';
+// Assumindo que o caminho para o logo e ícone estão corretos conforme sua estrutura
+import logoHeader from '../../assets/images/logo-header.svg';
+import miniCartIcon from '../../assets/images/mini-cart.svg'; 
 
-function DesktopHeader({ digitalStoreLogoUrl }) {
+import newProductImage from '../../assets/images/produtos/produc-image-5-removebg-preview.png';
+
+function DesktopHeader() {
   const location = useLocation();
   const currentPath = location.pathname;
 
   const [showMiniCart, setShowMiniCart] = useState(false);
   const miniCartRef = useRef(null);
 
-  const simulatedCartItems = [
-    {
-      id: 1,
-      name: 'Tênis Nike Revolution 6 Next Nature Masculino',
-      price: 219.0,
-      imageUrl: tenisImage,
+  const [simulatedCartItems, setSimulatedCartItems] = useState([
+  {
+      id: 1, // Novo ID
+      name: 'Tênis Nike Revolution 6 Next Nature Masculino', // Altere o nome conforme necessário
+      price: 149.99, // Altere o preço
       quantity: 1,
-    },
-
-  ];
+      imageUrl: newProductImage // Use a variável da imagem importada
+    }
+  ]);
+  
 
   const totalCartValue = simulatedCartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -28,14 +31,14 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
   );
 
   const getNavLinkClasses = (path) => {
-    const isActive = currentPath === path || (path === '/' && currentPath === '/');
+    const isActive = currentPath === path;
     return `relative text-lg pt-2 pb-1 group ${
       isActive ? 'text-pink-600' : 'text-gray-800 hover:text-pink-600'
     }`;
   };
 
   const getUnderlineClasses = (path) => {
-    const isActive = currentPath === path || (path === '/' && currentPath === '/');
+    const isActive = currentPath === path;
     return `absolute bottom-0 left-0 h-0.5 bg-pink-600 transition-all duration-300 ${
       isActive ? 'w-full' : 'w-0 group-hover:w-full'
     }`;
@@ -43,6 +46,11 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
 
   const toggleMiniCart = () => {
     setShowMiniCart(!showMiniCart);
+  };
+
+  const handleEmptyCart = () => {
+    setSimulatedCartItems([]);
+    console.log('Carrinho esvaziado!');
   };
 
   useEffect(() => {
@@ -62,7 +70,7 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between md:py-4">
         {/* Logo */}
         <div className="flex items-center">
-          <img src={digitalStoreLogoUrl} alt="Digital Store Logo" className="h-8" />
+          <img src={logoHeader} alt="Digital Store Logo" className="h-8" />
         </div>
 
         {/* Barra de Pesquisa */}
@@ -73,19 +81,8 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
             className="w-full py-2 px-4 border border-gray-300 bg-gray-100 rounded-md focus:outline-none"
           />
           <button className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
           </button>
         </div>
@@ -99,17 +96,14 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
             </span>
           </Link>
 
-          <Link
-            to="/entrar"
-            className="bg-pink-600 text-white px-14 py-3 rounded-md hover:bg-pink-700 transition duration-300"
-          >
+          <Link to="/entrar" className="bg-pink-600 text-white px-14 py-3 rounded-md hover:bg-pink-700 transition duration-300">
             Entrar
           </Link>
 
           {/* Carrinho com mini-cart */}
           <div className="relative" ref={miniCartRef}>
             <button onClick={toggleMiniCart} className="text-gray-700 hover:text-pink-600 focus:outline-none">
-              <img src="/assets/mini-cart.svg" alt="Ícone de Carrinho" className="w-6 h-6" />
+              <img src={miniCartIcon} alt="Ícone de Carrinho" className="w-6 h-6" />
               {simulatedCartItems.length > 0 && (
                 <span className="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {simulatedCartItems.length}
@@ -117,7 +111,6 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
               )}
             </button>
 
-            {/* Mini-carrinho */}
             {showMiniCart && (
               <div className="absolute right-0 mt-3 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50 p-4">
                 <h3 className="text-lg font-semibold mb-3">Meu Carrinho</h3>
@@ -127,10 +120,7 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
                     <p className="text-gray-500 text-center">Seu carrinho está vazio.</p>
                   ) : (
                     simulatedCartItems.map((item) => (
-                      <div
-                        key={item.id}
-                        className="flex items-center space-x-3 border-b pb-2 last:border-b-0 last:pb-0"
-                      >
+                      <div key={item.id} className="flex items-center space-x-3 border-b pb-2 last:border-b-0 last:pb-0">
                         <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded" />
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900 line-clamp-2">{item.name}</p>
@@ -148,13 +138,10 @@ function DesktopHeader({ digitalStoreLogoUrl }) {
                       <span className="text-lg font-bold text-pink-600">R$ {totalCartValue.toFixed(2)}</span>
                     </div>
                     <div className="flex flex-col space-y-2">
-                      <Link
-                        to="/compraprodutos"
-                        className="w-full py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition duration-300 text-center"
-                      >
+                      <Link to="/compraprodutos" className="w-full py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition duration-300 text-center">
                         Ver Carrinho
                       </Link>
-                      <button className="w-full py-2 text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 transition duration-300">
+                      <button onClick={handleEmptyCart} className="w-full py-2 text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 transition duration-300">
                         Esvaziar
                       </button>
                     </div>

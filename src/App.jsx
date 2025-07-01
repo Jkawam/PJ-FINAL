@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AppRoutes from './routes/Routes'; // Importa seu componente de rotas
+import AppRoutes from "./routes/Routes.jsx";
 import './index.css'; 
 
 function App() {

@@ -1,4 +1,6 @@
 import React from "react";
+// 1. A imagem é importada como um módulo no topo do arquivo.
+import logoFooter from "../../assets/images/logo-footer.svg";
 
 function DesktopFooter() {
   return (
@@ -7,7 +9,8 @@ function DesktopFooter() {
         {/* Primeira Coluna */}
         <div>
           <img
-            src="/assets/logo-footer.svg"
+            // 2. A variável importada é usada aqui.
+            src={logoFooter}
             alt="Digital Store Logo"
             className="h-8 mb-2"
           />

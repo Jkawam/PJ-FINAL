@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import MainLayout from '../layouts/MainLayout';
-
 import Home from '../pages/Home';
 import Produtos from '../pages/Produtos';
 import Categorias from '../pages/Categorias';
