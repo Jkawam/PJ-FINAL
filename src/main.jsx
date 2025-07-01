@@ -1,18 +1,17 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import AppRoutes from "./routes/Routes.jsx"; 
-import "./index.css"; // importa o CSS com tailwind
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";  // Importa o componente App (que tem o header, footer, links)
+import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppRoutes />
+    <BrowserRouter basename="/PJ-FL">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
+
+
 );
-
-
-
-
-
-
 
 
