@@ -121,7 +121,7 @@ function MobileHeader() {
           </button>
         </div>
         <nav className="flex flex-col p-4 space-y-4 flex-grow">
-          <h1 className="text-xl font-semibold text-gray-700 mb-2">Olá, Francisquinho Erickzinho</h1>
+          <h1 className="text-xl font-semibold text-gray-700 mb-2">Olá, Seja Bem Vindo</h1>
           <div className="flex flex-col space-y-2 mb-3">
             <Link to="/minhas-informacoes" onClick={toggleMenu} className="relative text-gray-800 hover:text-pink-600 text-lg pt-2 pb-1 group">
               <span className="relative inline-block">Minhas Informações<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-600 transition-all duration-300 group-hover:w-full"></span></span>
