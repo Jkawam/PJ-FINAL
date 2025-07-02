@@ -16,6 +16,7 @@ import MeuPerfil from '../pages/pedidos/MeuPerfil';
 import MinhasInformacoes from '../pages/pedidos/MinhasInformaçoes';
 import Pagamento from '../pages/pedidos/Pagamento';
 import CompraFeita from '../pages/produtofinal/CompraFeita';
+import MetodosDePagamento from '../pages/MetodosDePagamento';
 
 function AppRoutes() {
   return (
@@ -31,6 +32,7 @@ function AppRoutes() {
         <Route path="meus-pedidos" element={<MeusPedidos />} />
         <Route path="compraprodutos" element={<CompraProdutos />} />
         <Route path="finalizar-compra" element={<FinalizarCompra />} />
+        <Route path="metodos-pagamento" element={<MetodosDePagamento />} />
         <Route path="meu-perfil" element={<MeuPerfil />} />
         <Route path="minhas-informacoes" element={<MinhasInformacoes />} />
         <Route path="pagamento" element={<Pagamento />} />

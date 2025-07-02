@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../functions/nav';
 
+// CAMINHO DA IMAGEM CORRIGIDO AQUI
+import tenisImage from '../assets/images/produtos/produc-image-5-removebg-preview.png';
 
 const pedidos = [
   { id: '2234691032', status: 'Produto em trânsito', statusColor: 'text-orange-500' },
@@ -35,7 +37,8 @@ function Pedidos() {
             >
               <div className="flex gap-4 items-start ">
                 <img
-                  src="src/assets/images/produtos/produc-image-5-removebg-preview.png"
+                  // A variável importada é usada aqui, como antes.
+                  src={tenisImage}
                   alt="Tênis"
                   className="w-16 h-16 rounded object-cover border bg-violet-200"
                 />

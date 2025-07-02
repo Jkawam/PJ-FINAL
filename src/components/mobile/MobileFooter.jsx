@@ -1,16 +1,21 @@
 import React from "react";
 
+// 1. IMAGEM DA LOGO IMPORTADA AQUI
+// ATENÇÃO: Verifique se o caminho para a sua imagem está correto!
+import logoFooter from '../../assets/images/logo-footer.svg';
+
 function MobileFooter() {
   return (
     <footer className="md:hidden bg-neutral-900 text-white px-6 py-8 text-sm">
-      <img src="/assets/logo-footer.svg" alt="Digital Store Logo" className="h-8 mb-4" />
+      {/* 2. USANDO A VARIÁVEL IMPORTADA NO SRC */}
+      <img src={logoFooter} alt="Digital Store Logo" className="h-8 mb-4" />
 
       <p className="mb-8 text-gray-300">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
       </p>
 
       {/* Ícones Sociais */}
-      <div className="flex justify-start mt-5 space-x-5 mb-8"> {/* Alterado para justify-start */}
+      <div className="flex justify-start mt-5 space-x-5 mb-8">
         {/* Facebook */}
         <a href="#" className="text-gray-500 hover:text-white dark:hover:text-white dark:text-gray-400" aria-label="Facebook">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

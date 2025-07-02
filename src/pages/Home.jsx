@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 import nikeAirTransparente from '../layouts/imagemDeProdutos/nike-air-transparente.png';
 
-
 import supremeDrop from '../layouts/imagemDeProdutos/drop-supreme.png';
 import adidasCollection from '../layouts/imagemDeProdutos/coleção-adidas.png';
 import beatsBass from '../layouts/imagemDeProdutos/beats-bass.png';
-
 
 import camisaImg from '../layouts/imagens/camisa.png';
 import calcasImg from '../layouts/imagens/calças.png';
@@ -18,12 +16,10 @@ import tenisImg from '../layouts/imagens/Tenis.png';
 
 import airMaxImg from '../layouts/imagemDeProdutos/airMax.png';
 
-
 import limitadoImg from '../layouts/imagemDeProdutos/limitado.png';
 
 
 function Home() {
-
   const colecaoDestaqueItems = [
     { src: supremeDrop, alt: "Supreme" },
     { src: adidasCollection, alt: "Adidas" },
@@ -37,7 +33,6 @@ function Home() {
     { src: headphonesImg, alt: "Fones de Ouvido", label: "Headphones", imgClass: "w-16 h-12" },
     { src: tenisImg, alt: "Tênis", label: "Tênis", imgClass: "w-14 h-14" }
   ];
-
 
   return (
     <>
@@ -91,7 +86,9 @@ function Home() {
           {/* Coleções em destaque */}
           <section className='py-12 bg-gray-50 text-center'>
             <h2 className='text-xl font-semibold text-gray-800 mb-8'>Coleções em destaque</h2>
-            <div className="flex overflow-x-auto space-x-4 px-2 md:justify-center scrollbar-thin scrollbar-thumb-gray-300">
+            
+            {/* ===== LINHA ALTERADA AQUI ===== */}
+            <div className="flex overflow-x-auto space-x-4 px-2 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {colecoesCirculoItems.map(({ src, alt, label, imgClass }, index) => (
                 <div className='flex-shrink-0 flex flex-col items-center space-y-2' key={index}>
                   <div className='bg-white w-20 h-20 rounded-full flex items-center justify-center shadow'>
